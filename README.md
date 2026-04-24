@@ -27,7 +27,7 @@ Features
 How the Quiz Works
 
 •	Questions are loaded from a predefined dataset 
-•	A currentIndex tracks progress through the flashcards 
+•	A current Index tracks progress through the flashcards 
 •	Each tap moves to the next question 
 •	At the end, the app calculates and displays a final score 
 •	Results are categorized into performance tiers 
@@ -39,7 +39,7 @@ Score	Level	Message
 7+	🏆 High	Master Hacker!
 4–6	👍 Medium	Great job! Keep it up!
 0–3	📚 Low	Stay Safe Online! Keep practising!
-		
+
 Tech Stack
 
 •	Kotlin 
@@ -66,6 +66,9 @@ app/
 │   └── anim/
 └── test/                # Unit tests
 
+
+
+
 Running the Project
 
 Prerequisites
@@ -73,7 +76,7 @@ Prerequisites
 •	JDK 17 
 •	Android SDK 34 
 
-Steps
+Steps:
 git clone https://github.com/EvelynAkeyo/Hack-or-Myth.git
 cd Hack-or-Myth
 Then:
@@ -89,15 +92,18 @@ Every push triggers:
 •	Automatic build (APK generation) 
 •	Unit test execution 
 •	Artifact upload 
-This ensures every version is stable and build ready.
 
 Demo
+
 https://www.youtube.com/shorts/ZM1v5wYhtpM
 
 Author
+
 Evelyn Akeyo
 GitHub: https://github.com/EvelynAkeyo 
 
 Note
-This project was developed as part of an educational assignment focused on Android development, UI design, and testing practices.
+
+This project was developed as part of an educational assignment focused on Android development, UI design and testing practices.
+
 
