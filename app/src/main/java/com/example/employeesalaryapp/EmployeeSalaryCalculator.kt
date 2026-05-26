@@ -1,25 +1,30 @@
 package com.example.employeesalaryapp
 
 /**
- * Class representing an Employee.
- * Named 'Employee' to distinguish it from the application name 'EmployeeSalaryApp'.
+ * Logic class responsible for calculating salary deductions.
+ * Named 'EmployeeSalaryCalculator' to be distinct from 'EmployeeSalaryApp'.
  */
-class Employee(val name: String, val grossSalary: Double) {
+class EmployeeSalaryCalculator {
 
     /**
-     * Calculates the net salary based on the following tax rules:
-     * - 0 to 10,000: 5% tax
-     * - 10,001 to 30,000: 7% tax
-     * - Above 30,000: 10% tax
+     * Determines the tax percentage based on the gross salary:
+     * 0-10,000 -> 5%
+     * 10,001-30,000 -> 7%
+     * > 30,000 -> 10%
      */
-    fun calculateNetSalary(): Double {
-        val taxPercentage = when {
+    fun getTaxPercentage(grossSalary: Double): Double {
+        return when {
             grossSalary <= 10000 -> 0.05
             grossSalary <= 30000 -> 0.07
             else -> 0.10
         }
-        
-        val taxAmount = grossSalary * taxPercentage
-        return grossSalary - taxAmount
+    }
+
+    fun calculateTaxAmount(grossSalary: Double): Double {
+        return grossSalary * getTaxPercentage(grossSalary)
+    }
+
+    fun calculateNetSalary(grossSalary: Double): Double {
+        return grossSalary - calculateTaxAmount(grossSalary)
     }
 }
